@@ -3,9 +3,6 @@
 This image is based on `debian:9` and the game server is set up via steamcmd.
 It aims to provide a simple method to set up a basic and also customizable Counter-Strike 1.6 server via Docker.
 
-[![Docker Automated build](https://img.shields.io/docker/automated/febley/counter-strike_server.svg)](https://hub.docker.com/r/febley/counter-strike_server/builds/) [![Docker Build Status](https://img.shields.io/docker/build/febley/counter-strike_server.svg)](https://hub.docker.com/r/febley/counter-strike_server/builds/) [![Download size](https://images.microbadger.com/badges/image/febley/counter-strike_server.svg)](https://microbadger.com/images/febley/counter-strike_server) [![Commit](https://images.microbadger.com/badges/commit/febley/counter-strike_server.svg)](https://microbadger.com/images/febley/counter-strike_server)
-
-
 
 ## Quick start
 
@@ -41,7 +38,7 @@ You can add you own `server.cfg`, `banned.cfg`, `listip.cfg` and `mapcycle.txt` 
 The complete command looks like this:
 
 ``` bash
-docker run --name counter-strike_server -p 27015:27015/udp -p 27015:27015 -v /path/to/your/server.cfg:/hlds/cstrike/server.cfg febley/counter-strike_server:latest
+docker run --name counter-strike_server -p 27015:27015/udp -p 27015:27015 -v /home/server.cfg:/hlds/cstrike/server.cfg secret105v/counterstrike
 ```
 
 Keep in mind the server.cfg file can override the settings from your environment variables:  
