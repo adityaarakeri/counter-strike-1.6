@@ -12,11 +12,11 @@ It aims to provide a simple method to set up a basic and also customizable Count
 The fastest way to set this up is to pull the image and start it via `docker run`.
 
 ``` bash
-docker pull febley/counter-strike_server
+docker pull secret105v/counterstrike
 ```
 
 ``` bash
-docker run --name counter-strike_server -p 27015:27015/udp -p 27015:27015 febley/counter-strike_server:latest
+docker run --name counter-strike_server -p 27015:27015/udp -p 27015:27015 secret105v/counterstrike
 ```
 
 However it's recommend to run the server via `docker-compose`. You can find an example docker-compose.yml below.
@@ -94,8 +94,8 @@ version: '3'
 services:
 
   hlds:
-    container_name: counter-strike_server
-    image: febley/counter-strike_server:latest
+    container_name: counterstrike
+    image: secret105v/counterstrike
     restart: always
     environment:
       - PORT=27015
